@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexusFX — Your Ultimate Deriv Trading Ecosystem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="main-nav">
+  <a href="index.html" class="nav-logo">NEXUS<span>FX</span></a>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#strategies">Strategies</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#testimonials">Community</a></li>
+  </ul>
+  <div class="nav-btns">
+    <a href="terminal.html" class="btn-sm btn-ghost">Sign In</a>
+    <a href="terminal.html" class="btn-sm btn-primary">Launch Terminal &#8599;</a>
+  </div>
+  <div class="nav-mobile-toggle" onclick="toggleMobileNav()" id="mobile-toggle">&#9776;</div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#features" onclick="closeMobileNav()">Features</a>
+  <a href="#strategies" onclick="closeMobileNav()">Strategies</a>
+  <a href="#how-it-works" onclick="closeMobileNav()">How It Works</a>
+  <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+  <a href="terminal.html">Launch Terminal</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-tag">&#9679; Now live on Deriv API v3</div>
+      <h1 class="hero-h1">
+        <span class="line1">YOUR ULTIMATE</span>
+        <span class="line2">DERIV TRADING</span>
+        <span class="line3">ECOSYSTEM</span>
+      </h1>
+      <p class="hero-p">
+        At NexusFX, we don't just teach trading — we <strong>build traders</strong>.
+        Access proven strategies, a live backtesting engine, real-time mentorship,
+        and powerful tools designed to boost your consistency and profitability.
+      </p>
+      <div class="hero-ctas">
+        <a href="terminal.html" class="btn-lg btn-lg-primary">&#9658; Launch Terminal</a>
+        <a href="#features" class="btn-lg btn-lg-ghost">Explore Features</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-val" id="hs-traders">0</div>
+          <div class="hero-stat-lab">Active Traders</div>
+        </div>
+        <div>
+          <div class="hero-stat-val" id="hs-trades">0</div>
+          <div class="hero-stat-lab">Trades Executed</div>
+        </div>
+        <div>
+          <div class="hero-stat-val" id="hs-wr">0%</div>
+          <div class="hero-stat-lab">Avg Win Rate</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-chart-card">
+        <div class="hcc-head">
+          <div class="hcc-dot" style="background:#ff5f57"></div>
+          <div class="hcc-dot" style="background:#febc2e"></div>
+          <div class="hcc-dot" style="background:#28c840"></div>
+          <div class="hcc-ticker">R_50 / USD &nbsp;&#9679; LIVE</div>
+          <div class="hcc-price" id="hero-price">985.124</div>
+          <div class="hcc-ch" id="hero-ch">+0.42%</div>
+        </div>
+        <div class="hcc-body">
+          <div class="hcc-chart"><canvas id="hero-chart"></canvas></div>
+        </div>
+        <div class="hcc-metrics">
+          <div class="hcc-m"><div class="hcc-mv" id="hm1" style="color:var(--g)">54.2</div><div class="hcc-ml">RSI</div></div>
+          <div class="hcc-m"><div class="hcc-mv" id="hm2" style="color:var(--am)">MID</div><div class="hcc-ml">BB Band</div></div>
+          <div class="hcc-m"><div class="hcc-mv" id="hm3" style="color:var(--bl)">BUY</div><div class="hcc-ml">Signal</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <div class="marquee-item"><span>R_10</span><span class="mval">74,523.14</span><span class="mch mpos">+0.12%</span></div>
+    <div class="marquee-item"><span>R_25</span><span class="mval">3,820.45</span><span class="mch mpos">+0.34%</span></div>
+    <div class="marquee-item"><span>R_50</span><span class="mval">985.12</span><span class="mch mpos">+0.42%</span></div>
+    <div class="marquee-item"><span>R_75</span><span class="mval">1,247.88</span><span class="mch mneg">-0.18%</span></div>
+    <div class="marquee-item"><span>R_100</span><span class="mval">6,543.21</span><span class="mch mneg">-0.61%</span></div>
+    <div class="marquee-item"><span>1HZ10V</span><span class="mval">74,519.07</span><span class="mch mpos">+0.08%</span></div>
+    <div class="marquee-item"><span>BTC/USD</span><span class="mval">67,420.00</span><span class="mch mpos">+1.24%</span></div>
+    <div class="marquee-item"><span>ETH/USD</span><span class="mval">3,512.88</span><span class="mch mneg">-0.33%</span></div>
+    <div class="marquee-item"><span>R_10</span><span class="mval">74,523.14</span><span class="mch mpos">+0.12%</span></div>
+    <div class="marquee-item"><span>R_25</span><span class="mval">3,820.45</span><span class="mch mpos">+0.34%</span></div>
+    <div class="marquee-item"><span>R_50</span><span class="mval">985.12</span><span class="mch mpos">+0.42%</span></div>
+    <div class="marquee-item"><span>R_75</span><span class="mval">1,247.88</span><span class="mch mneg">-0.18%</span></div>
+    <div class="marquee-item"><span>R_100</span><span class="mval">6,543.21</span><span class="mch mneg">-0.61%</span></div>
+    <div class="marquee-item"><span>1HZ10V</span><span class="mval">74,519.07</span><span class="mch mpos">+0.08%</span></div>
+    <div class="marquee-item"><span>BTC/USD</span><span class="mval">67,420.00</span><span class="mch mpos">+1.24%</span></div>
+    <div class="marquee-item"><span>ETH/USD</span><span class="mval">3,512.88</span><span class="mch mneg">-0.33%</span></div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="section-inner">
+    <div class="section-tag">Platform Features</div>
+    <h2 class="section-h2">EVERYTHING YOU NEED<br>TO TRADE WITH EDGE</h2>
+    <p class="section-sub">A complete ecosystem built on the Deriv API — from live execution to deep historical analysis.</p>
+    <div class="features-grid">
+      <div class="feat-card"><div class="feat-icon">&#9889;</div><div class="feat-title">Live Trading Terminal</div><div class="feat-desc">Execute Rise/Fall, Call/Put contracts with real-time WebSocket streaming. RSI and Bollinger Band signals on every tick.</div></div>
+      <div class="feat-card"><div class="feat-icon">&#128200;</div><div class="feat-title">Backtesting Engine</div><div class="feat-desc">Simulate up to 5,000 historical candles with four strategies — RSI Divergence, Bollinger Breakout, MACD Crossover, and EMA Ribbon.</div></div>
+      <div class="feat-card"><div class="feat-icon">&#128272;</div><div class="feat-title">OAuth 2.0 Security</div><div class="feat-desc">Authenticate securely via Deriv OAuth 2.0. API tokens are encrypted in local storage and never transmitted to third parties.</div></div>
+      <div class="feat-card"><div class="feat-icon">&#128202;</div><div class="feat-title">Advanced Analytics</div><div class="feat-desc">Win Rate, Profit Factor, Max Drawdown, and Expectancy — all live. Growth curves comparing live vs. backtest performance.</div></div>
+      <div class="feat-card"><div class="feat-icon">&#9881;</div><div class="feat-title">Risk Management</div><div class="feat-desc">Configurable Stop Loss, Take Profit, and a Martingale engine with customizable multiplier and max steps.</div></div>
+      <div class="feat-card"><div class="feat-icon">&#128203;</div><div class="feat-title">Trade Journal</div><div class="feat-desc">Every trade logged with timestamp, entry/exit price, P&amp;L, and status badges. Export your full journal as CSV anytime.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGIES -->
+<section class="section section-alt" id="strategies">
+  <div class="section-inner">
+    <div class="section-tag">Built-In Strategies</div>
+    <h2 class="section-h2">BATTLE-TESTED<br>ALGORITHMS</h2>
+    <p class="section-sub">Each strategy can be backtested against 5,000 data points before going live.</p>
+    <div class="strat-grid">
+      <div class="strat-card"><div class="strat-icon">&#128308;</div><div><div class="strat-name">RSI Divergence</div><div class="strat-desc">Identifies overbought and oversold reversals using a configurable RSI period. Fires when RSI crosses back through the 70/30 threshold.</div><div class="strat-badge badge-pu">MOMENTUM</div></div></div>
+      <div class="strat-card"><div class="strat-icon">&#128209;</div><div><div class="strat-name">Bollinger Breakout</div><div class="strat-desc">Trades price breakouts above or below the Bollinger Bands. Configurable period and standard deviation multiplier.</div><div class="strat-badge badge-bl">BREAKOUT</div></div></div>
+      <div class="strat-card"><div class="strat-icon">&#128200;</div><div><div class="strat-name">MACD Crossover</div><div class="strat-desc">Uses fast/slow EMA divergence and signal-line crossovers to detect trend changes. The gold standard for Deriv indices.</div><div class="strat-badge badge-am">TREND</div></div></div>
+      <div class="strat-card"><div class="strat-icon">&#127807;</div><div><div class="strat-name">EMA Ribbon</div><div class="strat-desc">Three-EMA ribbon crossover system with a filter EMA acting as a regime detector — only trades in the direction of the trend.</div><div class="strat-badge badge-g">MULTI-EMA</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how-it-works">
+  <div class="section-inner">
+    <div class="section-tag">Getting Started</div>
+    <h2 class="section-h2">UP AND RUNNING<br>IN 4 STEPS</h2>
+    <p class="section-sub">No complex setup. Works entirely in your browser via the Deriv WebSocket API.</p>
+    <div class="hiw-grid">
+      <div class="hiw-step"><div class="hiw-num">01</div><div class="hiw-title">Connect Your Account</div><div class="hiw-desc">Sign in with Deriv OAuth 2.0 or paste your API token. Demo mode available instantly — no account needed.</div></div>
+      <div class="hiw-step"><div class="hiw-num">02</div><div class="hiw-title">Choose Your Strategy</div><div class="hiw-desc">Select from four proven strategies. Configure all parameters — RSI period, BB multiplier, MACD fast/slow, or EMA lengths.</div></div>
+      <div class="hiw-step"><div class="hiw-num">03</div><div class="hiw-title">Run the Backtest</div><div class="hiw-desc">Simulate up to 5,000 candles in seconds. Review Win Rate, Profit Factor, Max Drawdown before risking real capital.</div></div>
+      <div class="hiw-step"><div class="hiw-num">04</div><div class="hiw-title">Trade Live</div><div class="hiw-desc">Switch to the Live Terminal, set your stake and risk limits, and execute contracts in real-time.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section section-alt" id="pricing">
+  <div class="section-inner">
+    <div class="section-tag">Membership Plans</div>
+    <h2 class="section-h2">INVEST IN YOUR<br>TRADING FUTURE</h2>
+    <p class="section-sub">Start free with live trading included. Upgrade for full power.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-name">Starter</div>
+        <div class="price-amount">Free</div>
+        <div class="price-period">Forever free</div>
+        <ul class="price-features">
+          <li>Live Trading (max $5 stake)</li>
+          <li>10 trades per day</li>
+          <li>3s execution delay</li>
+          <li>Backtester — 500 candles</li>
+          <li>RSI &amp; BB strategies</li>
+          <li class="no">All assets (R_50 only)</li>
+          <li class="no">Martingale engine</li>
+          <li class="no">CSV export</li>
+        </ul>
+        <a href="terminal.html" class="btn-price btn-price-ghost">Get Started Free</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-name">Pro Trader</div>
+        <div class="price-amount">$29<span>/mo</span></div>
+        <div class="price-period">Billed monthly &bull; Cancel anytime</div>
+        <ul class="price-features">
+          <li>Live Trading (unlimited)</li>
+          <li>Instant execution</li>
+          <li>All 6 assets</li>
+          <li>Backtester — 5,000 candles</li>
+          <li>All 4 strategies</li>
+          <li>Martingale engine</li>
+          <li>CSV trade journal export</li>
+          <li>Email support (24h)</li>
+        </ul>
+        <button class="btn-price btn-price-primary" onclick="showPayModal('pro')">&#9654; Get Pro — $29/mo</button>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Enterprise</div>
+        <div class="price-amount">$99<span>/mo</span></div>
+        <div class="price-period">Teams &amp; API access</div>
+        <ul class="price-features">
+          <li>Everything in Pro</li>
+          <li>Custom strategy builder</li>
+          <li>Multi-account management</li>
+          <li>Webhook trade alerts</li>
+          <li>API access</li>
+          <li>White-label option</li>
+          <li>Dedicated account manager</li>
+          <li>Priority Slack support</li>
+        </ul>
+        <button class="btn-price btn-price-ghost" onclick="showPayModal('enterprise')">Get Enterprise — $99/mo</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+  <div class="section-inner">
+    <div class="section-tag">Community</div>
+    <h2 class="section-h2">TRADERS WHO<br>TRUST NEXUSFX</h2>
+    <p class="section-sub">Join thousands of Deriv traders who've transformed their results with our platform.</p>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-quote">"The backtesting engine is a game-changer. I ran RSI Divergence on 5,000 candles and discovered a 62% win rate on R_50. Now I trade with actual confidence."</div><div class="testi-author"><div class="testi-avatar">&#127472;&#127466;</div><div><div class="testi-name">James M.</div><div class="testi-role">Nairobi, Kenya &bull; Pro Trader</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-quote">"The Martingale engine with a proper stop-loss saved me from myself. Having it all in one place means I actually stick to my strategy."</div><div class="testi-author"><div class="testi-avatar">&#127475;&#127468;</div><div><div class="testi-name">Adaeze O.</div><div class="testi-role">Lagos, Nigeria &bull; Pro Trader</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div><div class="testi-quote">"MACD Crossover on Volatility 100 — Profit Factor of 1.4 over 2,000 candles. That data gave me the conviction to trade real money."</div><div class="testi-author"><div class="testi-avatar">&#127487;&#127462;</div><div><div class="testi-name">Themba D.</div><div class="testi-role">Johannesburg, SA &bull; Pro Trader</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <h2 class="cta-h2">READY TO TRADE<br>WITH AN EDGE?</h2>
+    <p class="cta-p">Start with a free demo. Backtest your strategy. Trade live when you're ready.</p>
+    <div class="cta-btns">
+      <a href="terminal.html" class="btn-lg btn-lg-primary">&#9658; Launch Trading Terminal</a>
+      <a href="terminal.html" class="btn-lg btn-lg-ghost">Connect Deriv Account</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">NEXUS<span>FX</span></div>
+        <div class="footer-brand-desc">Your ultimate partner in Deriv trading success. We build traders.</div>
+        <div class="footer-social">
+          <a class="soc-btn" href="#" title="Telegram">&#9992;</a>
+          <a class="soc-btn" href="#" title="WhatsApp">&#128172;</a>
+          <a class="soc-btn" href="#" title="YouTube">&#9654;</a>
+          <a class="soc-btn" href="#" title="X">&#10005;</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Platform</div>
+        <ul>
+          <li><a href="terminal.html">Live Terminal</a></li>
+          <li><a href="backtest.html">Backtester</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="#strategies">Strategies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Resources</div>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="https://api.deriv.com" target="_blank">Deriv API Docs</a></li>
+          <li><a href="#">Video Tutorials</a></li>
+          <li><a href="#">Community Forum</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Company</div>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Affiliate Program</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 NexusFX. All rights reserved. Not affiliated with Deriv Ltd. Trading involves risk.</div>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Risk Disclaimer</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="plans.js"></script>
+<script src="payment.js"></script>
+<script src="app-state.js"></script>
+<script src="landing.js"></script>
+</body>
+</html>
